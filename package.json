@@ -1,0 +1,11 @@
+{ "name": "soft-rm"
+, "description": "Basic recycle bin for Linux command line"
+, "version": "0.0.1-alpha"
+, "license": "MIT"
+, "keywords": [ "rm" ]
+, "author": "René Kooi <rene@kooi.me>"
+, "repository":
+  { "type": "git"
+  , "url" : "http://github.com/goto-bus-stop/soft-rm.git"
+  }
+}
