@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=0.0.1
+VERSION="0.0.2-alpha"
 
 # gets the full path to a given file
 # used for turning cli arguments into absolute paths
@@ -74,6 +74,16 @@ softrm_flush_all() {
   rm -- "$(softrm_trashdir)"*
 }
 
+# lists soft-deleted files
+softrm_list() {
+  echo "Soft-deleted files:"
+  for file in "$(softrm_trashdir)"*.meta
+  do
+    echo "   * $(softrm_restorepath "${file%.meta}")"
+  done
+}
+
+# shows soft-rm version info
 softrm_version() {
   rm --version
   echo
@@ -94,6 +104,9 @@ case "$1" in
     ;;
   --get-dir)
     softrm_trashdir
+    ;;
+  --list)
+    softrm_list
     ;;
   --restore)
     softrm_restore "$2"

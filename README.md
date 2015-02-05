@@ -17,7 +17,7 @@ You can also add `soft-rm --flush-all` to your init scripts if you like.
 
 * does not work across file systems
 * "trash" directory is not configurable
-* does not support most of the `rm` cli arguments
+* does not support most of the `rm` cli arguments (including useful stuff like `-r`)
 
 ## Licence
 
